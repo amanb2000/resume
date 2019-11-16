@@ -1,0 +1,567 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Aman Bhargava</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	opacity: 0.5;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, KaiTi, STKaiTi, '华文楷体', KaiTi_GB2312, '楷体_GB2312', serif; }
+.mono { font-family: Nitti, 'Microsoft YaHei', '微软雅黑', monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, KaiTi, STKaiTi, '华文楷体', KaiTi_GB2312, '楷体_GB2312', serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, Nitti, 'Microsoft YaHei', '微软雅黑', monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="2a4b6ca1-9ffd-4485-a8f8-f315d9e281f6" class="page sans"><header><h1 class="page-title">Aman Bhargava</h1><table class="properties"><tbody></tbody></table></header><div class="page-body"><p id="8bbca4bd-042d-44f2-9ed8-1bbf4c06288b" class=""><a href="http://aman-bhargava.com">aman-bhargava.com</a> | <a href="http://github.com/amanb2000">github.com/amanb2000</a> | Spotify Artist Page: <a href="https://open.spotify.com/artist/1Szi9da9qEHzl37Yz5iNvb?si=YCrGWggyR6SW-6kt7_dYDg">Aman B</a> | aman.bhargava@mail.utoronto.ca </p><div id="619f91e9-82bc-460c-b5f2-5dbe5ba4a020" class="column-list"><div id="cc95f21b-ddbc-462b-bc12-3d2b46b165e5" style="width:50%" class="column"><h3 id="ebf4a5aa-43ce-46d0-9adf-a45e7559169f" class=""><strong>Education</strong></h3><p id="9b9e9bd2-b89e-4d42-9d14-6151e02351d1" class=""><strong>University of Toronto: BASc Engineering Science</strong></p><p id="0d265484-a142-4e83-ae7d-2fb371feaa00" class="">GPA: 3.80/4</p><p id="ca5f0625-4036-48d7-9493-c48c7d248c08" class="">Relevant Coursework: Linear Algebra, Algorithms and Data-structures, Digital and Computer Systems, Calculus I-III + Vector Calculus</p></div><div id="432ee1a2-ec53-459a-b255-998909fdf3e6" style="width:50%" class="column"><h3 id="5056b746-9e56-4534-9d51-343af448d1ba" class=""><strong>Skills </strong></h3><p id="1cf2161a-f0df-47a4-867c-b335b710b02b" class=""><strong>Programming</strong>: Python, C, JavaScript, MATLAB, Arduino, Java, PHP, HTML5/CSS3, Processing3</p><p id="a9170896-b734-4727-b692-2c2fb08cffe5" class=""><strong>Software: </strong>PyTorch, Fusion360, NumPy, SciKit Learn, Vim, Jupyter, Git, OpenCV, Node.js, Angular.js/Angular 8, Firebase.</p></div></div><h1 id="ed359102-731c-4046-8f3f-049564b5d0b9" class="">Experience</h1><div id="c63e3d1c-2d64-4aa8-9da4-039592ead575" class="column-list"><div id="5b62b989-0993-4201-80ef-2a41d30d358e" style="width:6.25%" class="column"><p id="09b2a79a-1f6e-48aa-ba69-5a42d1a341cf" class="">Oct. 2019- Now</p></div><div id="21b38e45-d13e-4658-9202-aeb181a7f603" style="width:93.75%" class="column"><p id="c5bea094-39a1-4540-ad0b-b2c20b1e86f3" class=""><strong>Research Assistant </strong>@ Mann Lab</p><p id="252dacc4-ef21-4a75-8e90-ab0d53102329" class="">Assist with <strong>microprocessor programming, </strong>live <strong>EEG analysis</strong> and feedback projects, and scripting. Currently focusing on investigating the uses for <strong>Sequential Wave Imprinting Technology</strong> (SWIM) and <strong>Muse EEG</strong>. Tooling is primarily <strong>Python</strong> and <strong>C</strong>. </p></div></div><div id="ab02f6fd-bd44-447a-83ed-7260d9fabbb0" class="column-list"><div id="85e63744-b8eb-4d93-b54e-2289964ee696" style="width:6.25%" class="column"><p id="211d16c0-c616-4db1-95a1-392ac54d8578" class="">May-Aug. 2019</p><p id="633d68d2-a0d6-417b-b231-10ed877376fe" class="">
+</p><p id="54c42ae9-acba-4835-9cf6-1a4e7bd63f83" class="">
+</p></div><div id="11e05a68-f942-47e8-b491-8e7fad1525fa" style="width:93.75%" class="column"><p id="4fbd99ac-c800-415e-a344-b997347474ce" class=""><strong>Technical Intern</strong> @ Venture13</p><p id="37fc2ab0-7a6e-4a33-b0e0-d0732816fd33" class=""><strong>Conceptualized</strong> and <strong>developed full-stack web applications</strong> using <strong>Angular</strong> and <strong>Firebase</strong> incorporating Google Calendar, Maps, Directions API’s for <strong>TheWeekendRoute</strong>, <strong>Venture13</strong>, and the <strong>Cobourg Police Force</strong>. Created robotics software suite for <strong>CrossWing Solutions</strong> using <strong>OpenCV, Python, and JavaScript</strong>. Assisted with <strong>microprocessor programming</strong>, implementing low power machine learning and signal processing with <strong>Nordic Semiconductor’s</strong> SDK for Amy Arthur’s <strong>CLAXON</strong> project.</p></div></div><div id="3bd50dc9-39e9-4877-9fc4-6acf2614b4b3" class="column-list"><div id="f2fa218a-dbe1-488f-b638-fd20fbc9929f" style="width:6.25%" class="column"><p id="6d3ebec1-ebc0-4d54-8f94-57e202fc1e69" class="">July-Aug. 2017</p></div><div id="9ee54c29-d2e8-48e7-9aa6-23151a109091" style="width:93.75%" class="column"><p id="f0a04a4b-30e1-4cb8-94b0-28aec0f6f233" class=""><strong>Technical Intern </strong>@ <a href="http://fluent.AI">Fluent.AI</a> </p><p id="77c1ea2a-979b-43db-8ed2-6a9002081e61" class="">Conceptualized and developed <strong>Python </strong>scripts to <strong>automate</strong> the <strong>data pre-processing</strong> pipeline for training of <strong>natural language processing algorithms</strong>. Researched and reported on competitor companies.</p></div></div><h1 id="c205050c-dbca-4c37-9cb7-cd3e22bdaf6f" class="">Projects</h1><p id="122138e1-98fe-4888-b70f-ab02df24aea6" class=""><strong>CareTrack: Co-Founder &amp; CEO</strong> - April 2019-Present - <a href="https://www.caretrack.io/">caretrack.io/</a></p><ul id="cfb1b586-82ea-4844-894e-fa036efc8353" class="bulleted-list"><li>Designed and implemented a <strong>full-stack web-based</strong> medical data entry &amp; <strong>analytics</strong> platform for assisted living facilities. </li></ul><ul id="da15b4f4-3df2-4ed1-a78d-ef602db76f2b" class="bulleted-list"><li>Leverages modern UI, <strong>data visualization</strong>, and <strong>predictive algorithms</strong> to improve patient outcomes and nurse, doctor, and administrator productivity.</li></ul><ul id="fce4dd34-1d2b-49ff-b137-0a1f0a2325c8" class="bulleted-list"><li>Currently in <strong>private beta</strong> for data collection. Incorporated in <strong>July 2019</strong>. </li></ul><ul id="ef178796-6a1c-4b0b-95ae-0004e9589bfc" class="bulleted-list"><li>Utilizes <strong>Angular</strong>, <strong>Firebase</strong>, <strong>Chart.js</strong>, <strong>Python</strong>/Flask.</li></ul><p id="fa0730e8-fc6c-4bd5-951a-551654ab5784" class=""><strong>Play the Orchestra: Team Lead </strong>-<strong> </strong>MakeUofT 2019 - <a href="https://github.com/amanb2000/PLAY_THE_ORCHESTRA">github.com/amanb2000/PLAY_THE_ORCHESTRA</a></p><ul id="4eea09f3-730a-4ebd-925c-2c797b29306b" class="bulleted-list"><li>Created a system of networked <strong>mobile phones</strong> and <strong>Raspberry Pi&#x27;s </strong>to enable users to play a human orchestra in <strong>real time </strong>via a MIDI keyboard.</li></ul><ul id="8d49a1e3-bd72-4e12-8a9e-7c102cdde048" class="bulleted-list"><li>Included a <strong>chord analytics </strong>and <strong>prediction</strong> module that recognized chords → utilized a Neural Net to predict the next chord in the sequence.</li></ul><ul id="2df37945-1f00-420b-8ab4-4c2ce41e46f8" class="bulleted-list"><li><strong>Awards: </strong>Top 3 Teams, Best Documentation.</li></ul><ul id="7aa6ce7e-e21e-468a-abaa-090025677c6a" class="bulleted-list"><li>Utilizes <strong>Node.js</strong>, <strong>Socket.IO</strong>, <strong>Azure Cloud</strong>.</li></ul><p id="b95eb8fc-5864-4740-95cd-86641e50cf01" class=""><strong>AP Capstone: Predicting Interest with EEG</strong> - Oct. 2017-April 2019 - <a href="https://archive.org/details/Draft10BhargavaResearchPaper">archive.org/details/Draft10BhargavaResearchPaper</a> </p><ul id="be21b52a-09b9-475b-870c-02aaf6c41fff" class="bulleted-list"><li>Conducted independent <strong>machine learning/neuroscience research</strong> on predicting student interest level based on EEG scan data.</li></ul><ul id="9c80ff0f-6f9c-4bc8-9139-7c59f38a0a8c" class="bulleted-list"><li>Successfully trained a collection of <strong>classifiers</strong> able to determine the interest level of students with <strong>~70% accuracy.</strong></li></ul><ul id="45382e7b-5253-45e5-807e-65b0822e3cdd" class="bulleted-list"><li><strong>Awards</strong>: 5/5 in AP Research, 99th percentile of all AP Research projects (all possible marks attained on paper &amp; oral defense)</li></ul><ul id="0cb9de57-61a1-47ba-b1a7-477549596c81" class="bulleted-list"><li>Utilizes <strong>EMOTIV</strong> EEG headset, pre-processing in <strong>MATLAB/Octave</strong>, <strong>Azure Machine Learning</strong>.</li></ul><p id="f2bebd1e-8a1c-48e2-b1d7-afec1d44fd53" class="">I also love making <strong>music</strong>, <strong>rock climbing</strong>, and <strong>photography</strong>! Check out my <a href="https://open.spotify.com/artist/1Szi9da9qEHzl37Yz5iNvb?si=YCrGWggyR6SW-6kt7_dYDg">Spotify</a> and <a href="https://500px.com/amanb2000">500px</a>!</p></div></article></body></html>
